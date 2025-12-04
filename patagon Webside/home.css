@@ -1,0 +1,110 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  /* Fondo animado estilo flyer */
+  background: repeating-radial-gradient(circle,
+              #000 0px,
+              #000 2px,
+              #fff 3px,
+              #fff 6px);
+  animation: opticalWaves 15s linear infinite;
+}
+
+/* Capa oscura para mejorar contraste */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* oscurece el fondo */
+  z-index: -1;
+}
+
+/* Animación de ondas ópticas */
+@keyframes opticalWaves {
+  0%   { background-size: 50px 50px; }
+  50%  { background-size: 60px 60px; }
+  100% { background-size: 50px 50px; }
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: #fff; /* contraste con fondo */
+}
+
+.subtitle {
+  font-style: italic;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.track-card {
+  position: relative;
+  background-color: rgba(255,255,255,0.9);
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.track-card:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,1);
+}
+
+.thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* 🎵 Estilo SoundCloud */
+.soundcloud {
+  border-color: #ff5500;
+}
+
+.btn-soundcloud {
+  background-color: #ff5500;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+}
+
+.btn-soundcloud:hover {
+  background-color: #e64a00;
+}
+
+/* 📸 Estilo Instagram */
+.instagram {
+  border-color: #d6249f;
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #feda75, #d6249f, #285AEB);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+}
+
+.btn-instagram:hover {
+  opacity: 0.9;
+}
